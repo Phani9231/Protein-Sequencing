@@ -120,7 +120,13 @@ Parameters: 2D list of strs ; 2D list of strs
 Returns: 2D list of strs
 '''
 def commonProteins(proteinList1, proteinList2):
-    return
+    temp=[]
+    for arow in proteinList1:
+        for brow in proteinList2:
+            if arow==brow and arow not in temp:
+                temp.append(arow)
+
+    return temp
 
 
 '''
@@ -235,12 +241,12 @@ if __name__ == "__main__":
     runWeek1()
 
     ## Uncomment these for Week 2 ##
-    """
+    
     print("\n" + "#"*15 + " WEEK 2 TESTS " +  "#" * 16 + "\n")
     test.week2Tests()
     print("\n" + "#"*15 + " WEEK 2 OUTPUT " + "#" * 15 + "\n")
     runWeek2()
-    """
+  
 
     ## Uncomment these for Week 3 ##
     """
